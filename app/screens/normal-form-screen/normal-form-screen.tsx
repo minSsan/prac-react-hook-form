@@ -133,6 +133,17 @@ const NormalFormScreen = ({ route, navigation }) => {
         >
           <Text>👉🏻 Hook Form Screen</Text>
         </Pressable>
+
+        <Pressable
+          onPress={() => {
+            navigate("bottom-sheet-screen")
+          }}
+          style={{
+            marginLeft: "auto",
+          }}
+        >
+          <Text>👉🏻 Bottom Sheet Screen</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   )

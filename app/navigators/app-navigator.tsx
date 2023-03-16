@@ -8,7 +8,7 @@ import React from "react"
 import { useColorScheme } from "react-native"
 import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { WelcomeScreen, DemoScreen, DemoListScreen } from "../screens"
+import { WelcomeScreen, DemoScreen, DemoListScreen, BottomSheetScreen } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigation-utilities"
 import NormalFormScreen from "../screens/normal-form-screen/normal-form-screen"
 import HookFormScreen from "../screens/hook-form-screen/hook-form-screen"
@@ -28,6 +28,7 @@ import HookFormScreen from "../screens/hook-form-screen/hook-form-screen"
 export type NavigatorParamList = {
   "normal-form-screen": undefined
   "hook-form-screen": undefined
+  "bottom-sheet-screen": undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -43,6 +44,7 @@ const AppStack = () => {
     >
       <Stack.Screen name="normal-form-screen" component={NormalFormScreen} />
       <Stack.Screen name="hook-form-screen" component={HookFormScreen} />
+      <Stack.Screen name="bottom-sheet-screen" component={BottomSheetScreen} />
     </Stack.Navigator>
   )
 }
